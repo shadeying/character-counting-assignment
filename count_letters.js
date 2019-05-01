@@ -1,7 +1,6 @@
 function countLetters(string){
   var object = {};
   var stringArray = string.split(" ").join("").split("");
-  // console.log(stringArray);
 
   for(var i = 0; i < stringArray.length; i++){
     var letter = stringArray[i];
@@ -9,10 +8,10 @@ function countLetters(string){
     for(var j = i + 1; j < stringArray.length; j++){
       if(stringArray[j] === letter){
         stringArray.splice(j, 1);
+        j--;
         count++;
       }
     }
-    console.log(count);
     object[letter] = count;
   }
   return object;
