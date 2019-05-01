@@ -5,14 +5,14 @@ function countLetters(string){
 
   for(var i = 0; i < stringArray.length; i++){
     var letter = stringArray[i];
-    for(var j = i + 1; j = stringArray.length; j++){
-      object[stringArray[j]] = count;
+    for(var j = i + 1; j < stringArray.length; j++){
+      object[letter] = count;
       if(letter === stringArray[j]){
-        object[stringArray[j]] = count + 1;
+        object[letter]++;
       }
     }
   }
   return object;
 };
 
-console.log(countLetters("Lighthouse Labs"));
+console.log(countLetters("lighthouse in the house"));
